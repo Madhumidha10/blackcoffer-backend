@@ -9,7 +9,7 @@ router.get("/getAll", async (req, res) => {
     dbConnect
       .collection("data")
       .find({})
-    //   .limit(50)
+        .limit(50)
       .toArray(function (err, result) {
         if (err) {
           res.status(400).send("Error fetching listings!");
