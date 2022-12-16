@@ -8,7 +8,7 @@ router.get("/getAll", async (req, res) => {
     const dbConnect = dbo.getDb();
     dbConnect
       .collection("data")
-      .find({})
+      .find({}) 
         .limit(50)
       .toArray(function (err, result) {
         if (err) {
