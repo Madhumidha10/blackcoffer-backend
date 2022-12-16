@@ -12,7 +12,7 @@ module.exports = {
   connectToServer: function (callback) {
     client.connect(function (err, db) {
       if (err || !db) {
-        return callback(err);
+        return callback;
       }
  
       dbConnection = db.db("bctest");

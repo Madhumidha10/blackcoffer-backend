@@ -1,9 +1,10 @@
 // //mongodb
 const db=require('./config/db')
 db.connectToServer()
+require("dotenv").config();
 const express = require('express')
 const app = express()
-const port = 4000
+const port = process.env.PORT||4000
 //import and use cors 
 const cors=require('cors')
 app.use(cors());
